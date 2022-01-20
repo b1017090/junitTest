@@ -192,7 +192,7 @@ class JudgeUtilsTest {
 	// 現在時刻：2017/04/01
 	// 合格条件：false
 	@Test
-	public void testIsRegisterdAge_17歳_プレイ不可() {
+	public void testIsRegisterdAge_17歳_プレイ可能() {
 		Calendar cal = Calendar.getInstance();
 		cal.clear();
 		cal.set(Calendar.YEAR, 2017);
@@ -213,7 +213,7 @@ class JudgeUtilsTest {
 		boolean actual = target.isRegisterdAge(birthDay);
 
 		//結果
-		assertFalse(actual);
+		assertTrue(actual);
 		mockTime.tearDown();
 	}
 }
